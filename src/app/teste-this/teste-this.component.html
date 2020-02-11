@@ -1,0 +1,105 @@
+<h1>Binds questions:</h1>
+
+
+<!-- ################################ BIND: ################################ -->
+
+<!-- quesion 1: -->
+<button type="button" (click) = "click('I clicked')" [disabled] = "btndisable">
+    click me
+</button>
+
+<br />
+<br />
+
+
+<!-- <button [ngStyle]="myStyles" (click) = "changeColor($event)" type="button"> -->
+<!-- <button [class]="btnStyle" [id]="title" type="button"> -->
+
+
+<!-- <button [class]="btnStyle" type="button" (click) = "cor($event)"> -->
+
+  <!-- question 2 -->
+<button [class]="btn2" type="button" (click) = "cor($event)">
+
+  click me
+</button>
+
+<br />
+<br />
+
+ <!-- question 2 - version2 -->
+<button [ngStyle]="myStyles" [id]="button2Version2" type="button">
+    Click me2
+</button>
+
+
+<!-- question 3 -->
+<button [id]="title" type="button" (click) = "exibirId(title)">
+
+  click me
+</button>
+
+
+<br />
+<br />
+
+<!-- question 4 -->
+
+<select (change)="change($event)">
+  <option value="carro">carro</option>
+  <option value="moto">moto</option>
+  <option value="avião">avião</option>
+</select>
+
+<p>
+  {{paragrafo}}
+</p>
+
+<!-- question 5 -->
+
+<input (keyup)="submitField($event)" [id]="field" type='text'>
+
+<p>
+  {{paragrafo2}}
+</p>
+
+<!-- question 6 -->
+
+<form (click) = "submitForm(inputformchange.value)">
+  <input type="text" plaholder="Insert a value" #inputformchange>
+  <br />
+  <input type="button" value="Send">
+</form>
+
+<p>
+  {{paragrafo3}}
+</p>
+
+<h1>DIRETIVAS questions:</h1>
+
+<!-- ################################ DIRETIVAS: ################################ -->
+
+<!-- question 1: -->
+
+<form (click) = "changeBoxPosition(boxPosition.value)">
+  <input type="number" #boxPosition>
+  <br />
+  <button type="button">Send</button>
+</form>
+
+<br />
+<br />
+
+<div [ngStyle]="position" Style="width:100px;height:100px; background-color:#428bca;">
+</div>
+
+<!-- question 2: -->
+<br />
+
+<select>
+  <option *ngFor = "let hero of heroes">{{hero}}</option>
+</select>
+
+<ul>
+  <li *ngFor = "heroesMoment"></li>
+</ul>
